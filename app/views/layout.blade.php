@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<title>Teamshare</title>
+	</head>
+    <body>
+        <h1>Teamshare</h1>
+        @yield('content')
+    </body>
+</html>
