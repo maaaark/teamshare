@@ -1,0 +1,12 @@
+#login {
+	background: #fff;
+	width: 380px;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding: 10px;
+}
+.input-large {
+	padding: 10px !important;
+	height: 40px !important;
+	width: 380px;
+}

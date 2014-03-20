@@ -17,6 +17,11 @@
 			@include('top')
 		</div>
 		<div class="page-container row-fluid">
+			<div class="container">
+				@if(Session::has('message'))
+					<p class="alert">{{ Session::get('message') }}</p>
+				@endif
+			</div>
 			@yield('content')
 			        <h1>Teamshare</h1>
 			@include('sidebar')

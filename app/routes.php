@@ -15,3 +15,5 @@ Route::get('/', function()
 {
 	return View::make('layout');
 });
+
+Route::controller('users', 'UsersController');
