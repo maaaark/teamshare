@@ -12,12 +12,35 @@
 			$this->layout->content = View::make('users.register');
 		}
 		
-		public function getProfile($id) {
+		public function show($id) {
 			$user = User::find($id);
+			if(is_null($user))
+			{
+				return Redirect::route('404');
+			}
 			$this->layout = View::make('layout');
 			$this->layout->content = View::make('users.profile')->with('user', $user);
 		}
 		
+		public function edit($id)
+		{
+			$user = User::find($id);
+			if (is_null($user))
+			{
+				return Redirect::route('404');
+			}
+			return View::make('users.edit', compact('user'));
+		}
+		
+		public function update($id)
+		{
+			$input = Input::all();
+			$user = User::find($id);
+			$user->save($input);
+			return Redirect::route('users.show', $id);
+		}
+
+	
 		public function getLogin() {
 			$this->layout->content = View::make('users.login');
 		}

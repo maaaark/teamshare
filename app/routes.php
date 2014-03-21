@@ -12,9 +12,13 @@
 */
 
 Route::get('/', 'BaseController@dashboard');
+Route::get('/404', 'BaseController@dashboard');
 Route::get('/dashboard', 'BaseController@dashboard');
 Route::get('/login', 'UsersController@getLogin');
 Route::get('/register', 'UsersController@getRegister');
+Route::get('/profile', 'UsersController@getProfile');
 Route::get('/profile/{id}', 'UsersController@getProfile');
+Route::get('/profile/{id}/edit', 'UsersController@edit');
+Route::get('/profile/{id}/update', 'UsersController@update');
 
-Route::controller('users', 'UsersController');
+Route::resource('users', 'UsersController');
