@@ -22,7 +22,8 @@ class BaseController extends Controller {
 	}
 	
 	public function dashboard() {
-		$this->layout->content = View::make('empty');
+		$users = User::all();
+		$this->layout->content = View::make('dashboard')->with('users', $users);
 	}
 
 }

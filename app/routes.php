@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('start');
-});
-
+Route::get('/', 'BaseController@dashboard');
 Route::get('/dashboard', 'BaseController@dashboard');
 Route::get('/login', 'UsersController@getLogin');
+Route::get('/register', 'UsersController@getRegister');
 
 Route::controller('users', 'UsersController');

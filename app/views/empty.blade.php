@@ -5,12 +5,16 @@
 		<div class="page-title">	
 			<h3>Dashboard</h3>	
 		</div>
-		
+
+		@if(Session::has('message'))
+			<p class="alert">{{ Session::get('message') }}</p>
+		@endif
+
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="grid simple">
 					<div class="grid-body">
-						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr
+						empty
 					</div>
 				</div>
 			</div>

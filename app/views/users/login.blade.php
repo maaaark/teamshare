@@ -3,6 +3,10 @@
  
     {{ Form::text('email', null, array('class'=>'input-large', 'placeholder'=>'Email Address')) }}
     {{ Form::password('password', array('class'=>'input-large', 'placeholder'=>'Password')) }}
- 
-    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}
+	<br/>
+    {{ Form::submit('Login', array('class'=>'btn btn-large btn-primary btn-block'))}}<br/>
+	<br/>
+	<div style="text-align: center;">
+	Keinen Account? <a href="/register">Kostenlos Registrieren!</a>
+	</div>
 {{ Form::close() }}

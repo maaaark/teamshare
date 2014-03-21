@@ -15,11 +15,7 @@
 		public function getLogin() {
 			$this->layout->content = View::make('users.login');
 		}
-		
-		public function getDashboard() {
-			return View::make('layout');
-		}
-		
+				
 		public function postSignin() {
 			if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
 				return Redirect::to('dashboard')->with('message', 'You are now logged in!');
