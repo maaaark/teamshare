@@ -1,7 +1,13 @@
 <?php
 
 class BaseController extends Controller {
-
+	
+	protected $layout = "layout";
+	
+	public function __construct() {
+		$this->beforeFilter('auth', array('only'=>array('dashboard')));
+	}
+	
 	/**
 	 * Setup the layout used by the controller.
 	 *
@@ -13,6 +19,10 @@ class BaseController extends Controller {
 		{
 			$this->layout = View::make($this->layout);
 		}
+	}
+	
+	public function dashboard() {
+		$this->layout->content = View::make('empty');
 	}
 
 }

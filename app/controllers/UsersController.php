@@ -5,6 +5,7 @@
 		
 		public function __construct() {
 			$this->beforeFilter('csrf', array('on'=>'post'));
+			$this->beforeFilter('auth', array('only'=>array('getDashboard')));
 		}
 		
 		public function getRegister() {
@@ -15,6 +16,20 @@
 			$this->layout->content = View::make('users.login');
 		}
 		
+		public function getDashboard() {
+			return View::make('layout');
+		}
+		
+		public function postSignin() {
+			if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+				return Redirect::to('dashboard')->with('message', 'You are now logged in!');
+			} else {
+				return Redirect::to('users/login')
+					->with('message', 'Your username/password combination was incorrect')
+					->withInput();
+			}
+		}
+
 		public function postCreate() {
 			$validator = Validator::make(Input::all(), User::$rules);
 		 
@@ -32,6 +47,11 @@
 				// validation has failed, display error messages  
 				return Redirect::to('users/register')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 			}
+		}
+		
+		public function getLogout() {
+			Auth::logout();
+			return Redirect::to('login')->with('message', 'Your are now logged out!');
 		}
 	
 	}

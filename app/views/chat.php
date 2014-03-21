@@ -28,7 +28,7 @@
       <div id="favourites-list">
         <div class="side-widget-content">
           <div class="user-details-wrapper active">
-            <div class="user-profile"> <img src="img/profiles/d.jpg" data-src="img/profiles/d.jpg" data-src-retina="img/profiles/d2x.jpg" width="35" height="35" /> </div>
+            <div class="user-profile"> <img src="/img/profiles/d.jpg" data-src="/img/profiles/d.jpg" data-src-retina="img/profiles/d2x.jpg" width="35" height="35" /> </div>
             <div class="user-details">
               <div class="user-name"> Jane Smith </div>
               <div class="user-more"> Hello you there? </div>
@@ -40,7 +40,7 @@
             <div class="clearfix"></div>
           </div>
           <div class="user-details-wrapper">
-            <div class="user-profile"> <img src="img/profiles/c.jpg" data-src="img/profiles/c.jpg" data-src-retina="img/profiles/c2x.jpg" width="35" height="35" /> </div>
+            <div class="user-profile"> <img src="/img/profiles/c.jpg" data-src="/img/profiles/c.jpg" data-src-retina="img/profiles/c2x.jpg" width="35" height="35" /> </div>
             <div class="user-details">
               <div class="user-name"> David Nester </div>
               <div class="user-more"> Busy, Do not disturb </div>
@@ -60,7 +60,7 @@
       <div class="side-widget-title">more friends</div>
       <div class="side-widget-content" id="friends-list">
         <div class="user-details-wrapper">
-          <div class="user-profile"> <img src="img/profiles/d.jpg" data-src="img/profiles/d.jpg" data-src-retina="img/profiles/d2x.jpg" width="35" height="35" /> </div>
+          <div class="user-profile"> <img src="/img/profiles/d.jpg" data-src="/img/profiles/d.jpg" data-src-retina="img/profiles/d2x.jpg" width="35" height="35" /> </div>
           <div class="user-details">
             <div class="user-name"> Jane Smith </div>
             <div class="user-more"> Hello you there? </div>
@@ -72,7 +72,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="user-details-wrapper">
-          <div class="user-profile"> <img src="img/profiles/h.jpg" data-src="img/profiles/h.jpg" data-src-retina="img/profiles/h2x.jpg" width="35" height="35" /> </div>
+          <div class="user-profile"> <img src="/img/profiles/h.jpg" data-src="/img/profiles/h.jpg" data-src-retina="img/profiles/h2x.jpg" width="35" height="35" /> </div>
           <div class="user-details">
             <div class="user-name"> David Nester </div>
             <div class="user-more"> Busy, Do not disturb </div>
@@ -86,7 +86,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="user-details-wrapper">
-          <div class="user-profile"> <img src="img/profiles/c.jpg" data-src="img/profiles/c.jpg" data-src-retina="img/profiles/c2x.jpg" width="35" height="35" /> </div>
+          <div class="user-profile"> <img src="/img/profiles/c.jpg" data-src="/img/profiles/c.jpg" data-src-retina="img/profiles/c2x.jpg" width="35" height="35" /> </div>
           <div class="user-details">
             <div class="user-name"> Jane Smith </div>
             <div class="user-more"> Hello you there? </div>
@@ -98,7 +98,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="user-details-wrapper">
-          <div class="user-profile"> <img src="img/profiles/h.jpg" data-src="img/profiles/h.jpg" data-src-retina="img/profiles/h2x.jpg" width="35" height="35" /> </div>
+          <div class="user-profile"> <img src="/img/profiles/h.jpg" data-src="/img/profiles/h.jpg" data-src-retina="img/profiles/h2x.jpg" width="35" height="35" /> </div>
           <div class="user-details">
             <div class="user-name"> David Nester </div>
             <div class="user-more"> Busy, Do not disturb </div>

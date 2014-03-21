@@ -22,10 +22,9 @@
 					<p class="alert">{{ Session::get('message') }}</p>
 				@endif
 			</div>
-			@yield('content')
-			        <h1>Teamshare</h1>
 			@include('sidebar')
-			@include('empty')
+			
+			@yield('content')
 		</div>
     
 	@include('chat')   

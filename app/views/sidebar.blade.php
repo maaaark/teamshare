@@ -1,10 +1,11 @@
 <div class="page-sidebar" id="main-menu">
+@if(Auth::check())
     <!-- BEGIN MINI-PROFILE -->
     <div class="user-info-wrapper">
-      <div class="profile-wrapper"> <img src="img/profiles/avatar.jpg" data-src="img/profiles/avatar.jpg" data-src-retina="img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
+      <div class="profile-wrapper"> <img src="/img/profiles/avatar.jpg" data-src="/img/profiles/avatar.jpg" data-src-retina="img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
       <div class="user-info">
         <div class="greeting">Hallo</div>
-        <div class="username">Mark <span class="semi-bold">T.</span></div>
+        <div class="username">{{ Auth::user()->firstname }} <span class="semi-bold">T.</span></div>
         <div class="status">Status<a href="#">
           <div class="status-icon green"></div>
           Online</a></div>
@@ -26,10 +27,12 @@
         </ul>
       </li>
 	  <li class=""><a href="/users/logout"><i class="icon-off"></i> <span class="title">Ausloggen</span></a></li>
-	  <li>{{ HTML::link('users/logout', '<i class="icon-off"></i> <span class="title">Ausloggen</span>') }}</li>
     </ul>
 
     <a href="#" class="scrollup">Scroll</a>
     <div class="clearfix"></div>
     <!-- END SIDEBAR MENU -->
+@else
+	Nicht eingeloggt
+@endif	
   </div>

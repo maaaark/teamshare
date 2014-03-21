@@ -88,7 +88,6 @@ Page sidebar
 }
 .page-sidebar{
 	background-color:#1B1E24 !important;
-	height:100%;
 	font-family: 'Open Sans';
 }
 .nav-collapse.collapse {
@@ -99,7 +98,7 @@ Page sidebar
 	width: 45px;
 	position:absolute;
 	height:100%;
-	background-color:#0aa699 !important;
+	background-color:#1B1E24 !important;
 }
 
 .page-sidebar .inner-menu{
@@ -134,7 +133,7 @@ Page sidebar
 
 .page-sidebar.mini > ul > li >a:hover, 
 .page-sidebar.mini > ul > li:hover >a {  
-  background: #0b9c8f;
+  background: #1B1E24;
 }
 .page-sidebar.mini  > ul > li > ul.sub-menu{
 	position:absolute;
@@ -389,7 +388,7 @@ blockquote small{
 }
 
 .bg-green {
-  background-color: #0aa699 !important;
+  background-color: #1B1E24 !important;
 }
 
 .bg-purple {
@@ -411,7 +410,7 @@ blockquote small{
 }
 
 .text-success{
-	color:#0AA699 !important;
+	color:#1B1E24 !important;
 }
 .text-info{
 	color:#0090D9 !important;
@@ -1389,7 +1388,7 @@ display:none;
 }
 
 .page-sidebar.mini{
-	 background-color: #0aa699 !important;
+	 background-color: #1B1E24 !important;
     height: 100%;
 	margin-top:0;
 	position:absolute;
@@ -2679,7 +2678,7 @@ form legend,
 }
 
 .grid-body.green, .grid.green {
-  background-color: #0aa699 !important;
+  background-color: #1B1E24 !important;
 }
 
 .grid-body.purple, .grid.purple {

@@ -14,6 +14,11 @@
 	</head>
     <body>
 		<div id="login">
+
+				@if(Session::has('message'))
+					<p class="alert">{{ Session::get('message') }}</p>
+				@endif
+
 			{{ $content }}
 		</div>
 	</body>

@@ -13,7 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('layout');
+	return View::make('start');
 });
+
+Route::get('/dashboard', 'BaseController@dashboard');
+Route::get('/login', 'UsersController@getLogin');
 
 Route::controller('users', 'UsersController');
