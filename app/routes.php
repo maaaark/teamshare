@@ -15,5 +15,6 @@ Route::get('/', 'BaseController@dashboard');
 Route::get('/dashboard', 'BaseController@dashboard');
 Route::get('/login', 'UsersController@getLogin');
 Route::get('/register', 'UsersController@getRegister');
+Route::get('/profile/{id}', 'UsersController@getProfile');
 
 Route::controller('users', 'UsersController');

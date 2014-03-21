@@ -12,6 +12,12 @@
 			$this->layout->content = View::make('users.register');
 		}
 		
+		public function getProfile($id) {
+			$user = User::find($id);
+			$this->layout = View::make('layout');
+			$this->layout->content = View::make('users.profile')->with('user', $user);
+		}
+		
 		public function getLogin() {
 			$this->layout->content = View::make('users.login');
 		}
