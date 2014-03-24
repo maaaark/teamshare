@@ -3,7 +3,7 @@
 <div class="page-content"> 
     <div class="content">  
 		<div class="page-title">	
-			<h3>Dashboard</h3>	
+			<h3>User</h3>	
 		</div>
 
 		@if(Session::has('message'))
@@ -13,17 +13,6 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="grid simple">
-					<div class="grid-body">
-						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row-fluid">
-			<div class="span12">
-				<div class="grid simple">
-					<div class="grid-title">Nutzer</div>
 					<div class="grid-body">
 						<table class="table table-bordered no-more-tables">
 							<thead>
@@ -52,7 +41,6 @@
 								@endforeach
 							</tbody>
 						 </table>
-						
 					</div>
 				</div>
 			</div>

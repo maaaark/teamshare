@@ -26,15 +26,6 @@
 									{{ Form::text('lastname') }}
 								</li>
 								<li>
-									{{ Form::label('password', 'Password:') }}
-									{{ Form::text('password') }}
-								</li>
-								<li>
-									{{ Form::label('email', 'Email:') }}
-									{{ Form::text('email') }}
-								</li>
-
-								<li>
 									{{ Form::submit('Update', array('class' => 'btn btn-info')) }}
 								</li>
 							</ul>

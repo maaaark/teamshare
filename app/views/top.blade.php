@@ -6,10 +6,10 @@
           </a> </li>
       </ul>
       <!-- BEGIN LOGO -->
-      <a href="index.php"><img src="/img/logo.png" class="logo" data-src="/img/logo.png" data-src-retina="/img/logo2x.png" width="130" height="21	" /></a>
+      <a href="/dashboard"><img src="/img/logo.png" class="logo" data-src="/img/logo.png" data-src-retina="/img/logo2x.png" width="130" height="21	" /></a>
       <!-- END LOGO -->
       <ul class="nav pull-right notifcation-center">
-        <li class="dropdown" id="header_task_bar"> <a href="index.php" class="dropdown-toggle active" data-toggle="">
+        <li class="dropdown" id="header_task_bar"> <a href="/dashboard" class="dropdown-toggle active" data-toggle="">
           <div class="iconset top-home"></div>
           </a> </li>
         <li class="dropdown" id="header_inbox_bar"> <a href="email.html" class="dropdown-toggle">

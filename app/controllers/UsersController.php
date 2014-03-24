@@ -12,6 +12,12 @@
 			$this->layout->content = View::make('users.register');
 		}
 		
+		public function index()
+		{
+			$users = User::all();
+			return View::make('users.index')->with('users', $users);
+		}
+		
 		public function show($id) {
 			$user = User::find($id);
 			if(is_null($user))
@@ -34,12 +40,35 @@
 		
 		public function update($id)
 		{
-			$input = Input::all();
-			$user = User::find($id);
-			$user->save($input);
-			return Redirect::route('users.show', $id);
-		}
+			$rules2 = array(
+			'firstname'       => 'required',
+			'lastname'        => 'required'
+			);
+			$validator = Validator::make(Input::all(), $rules2);
 
+			// process the login
+			if ($validator->fails()) {
+				return Redirect::to('users/' . $id . '/edit')
+					->withErrors($validator)
+					->withInput(Input::except('password'));
+			} else {
+				// store
+				$user = User::find($id);
+				$user->firstname = Input::get('firstname');
+				$user->lastname = Input::get('lastname');
+				$user->save();
+
+				// redirect
+				Session::flash('message', 'Successfully updated user!');
+				return Redirect::to('users/'.$id);
+			}
+		}
+		
+		public function destroy($id)
+		{
+			User::find($id)->delete();
+			return Redirect::route('users.index');
+		}
 	
 		public function getLogin() {
 			$this->layout->content = View::make('users.login');
