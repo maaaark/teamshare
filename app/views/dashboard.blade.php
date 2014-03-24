@@ -43,8 +43,7 @@
 										<td class="text-left">{{ $user->email }}</td>
 										<td class="text-left">{{ HTML::linkRoute('users.edit', 'Bearbeiten', ['id' => $user->id], ['class' => 'btn btn-default']) }}</td>
 										<td class="text-left">
-											{{ Form::open(array('method' => 'DELETE', 'route' =>
-											 array('users.destroy', $user->id))) }}
+											{{ Form::open(array('method' => 'DELETE', 'route' => array('users.destroy', $user->id))) }}
 											{{ Form::submit('Löschen', array('class' => 'btn btn-danger')) }}
 											{{ Form::close() }}
 										</td>

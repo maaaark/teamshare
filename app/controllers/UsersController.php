@@ -22,7 +22,7 @@
 			$user = User::find($id);
 			if(is_null($user))
 			{
-				return Redirect::route('404');
+				return Redirect::route('users.index');
 			}
 			$this->layout = View::make('layout');
 			$this->layout->content = View::make('users.profile')->with('user', $user);
@@ -33,7 +33,7 @@
 			$user = User::find($id);
 			if (is_null($user))
 			{
-				return Redirect::route('404');
+				return Redirect::route('users.index');
 			}
 			return View::make('users.edit', compact('user'));
 		}
@@ -74,7 +74,7 @@
 			$this->layout->content = View::make('users.login');
 		}
 				
-		public function postSignin() {
+		public function signin() {
 			if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
 				return Redirect::to('dashboard')->with('message', 'You are now logged in!');
 			} else {
@@ -102,6 +102,40 @@
 				return Redirect::to('users/register')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 			}
 		}
+		
+		
+		public function create()
+		{
+			return View::make('users.register');
+		}
+		
+		
+		public function store()
+		{
+			$input = Input::all();
+			$validation = Validator::make($input, User::$rules);
+
+			if ($validation->passes())
+			{
+				// User::create($input);
+				
+				$user = new User;
+				$user->firstname = Input::get('firstname');
+				$user->lastname = Input::get('lastname');
+				$user->email = Input::get('email');
+				$user->password = Hash::make(Input::get('password'));
+				$user->save();
+
+				return Redirect::route('users.index');
+			}
+
+			return Redirect::route('users.create')
+				->withInput()
+				->withErrors($validation)
+				->with('message', 'There were validation errors.');
+		}
+		
+	
 		
 		public function getLogout() {
 			Auth::logout();
