@@ -106,6 +106,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		
+		'Authority\AuthorityL4\AuthorityL4ServiceProvider',
 
 	),
 
@@ -137,6 +139,7 @@ return array(
 
 		'App'             => 'Illuminate\Support\Facades\App',
 		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
+		'Authority' 	  => 'Authority\AuthorityL4\Facades\Authority',
 		'Auth'            => 'Illuminate\Support\Facades\Auth',
 		'Blade'           => 'Illuminate\Support\Facades\Blade',
 		'Cache'           => 'Illuminate\Support\Facades\Cache',

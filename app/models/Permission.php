@@ -1,0 +1,1 @@
+class Permission extends Eloquent {}
