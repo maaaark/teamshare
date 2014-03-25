@@ -126,7 +126,7 @@
 				$user->password = Hash::make(Input::get('password'));
 				$user->save();
 
-				return Redirect::route('users.index');
+				return Redirect::to('/login')->with('message', 'Vielen Dank für deine Registrierung!');
 			}
 
 			return Redirect::route('users.create')
