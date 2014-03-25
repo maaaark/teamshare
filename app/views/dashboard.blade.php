@@ -14,7 +14,7 @@
 			<div class="span12">
 				<div class="grid simple">
 					<div class="grid-body">
-						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr
+						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr | ROLES BRANCH
 					</div>
 				</div>
 			</div>
@@ -31,8 +31,6 @@
 									<th class="text-left">Vorname</th>
 									<th class="text-left">Nachname</th>
 									<th class="text-left">E-Mail</th>
-									<th class="text-left">Bearbeiten</th>
-									<th class="text-left">Löschen</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -41,12 +39,6 @@
 										<td class="text-left">{{ $user->firstname }}</td>
 										<td class="text-left">{{ $user->lastname }}</td>
 										<td class="text-left">{{ $user->email }}</td>
-										<td class="text-left">{{ HTML::linkRoute('users.edit', 'Bearbeiten', ['id' => $user->id], ['class' => 'btn btn-default']) }}</td>
-										<td class="text-left">
-											{{ Form::open(array('method' => 'DELETE', 'route' => array('users.destroy', $user->id))) }}
-											{{ Form::submit('Löschen', array('class' => 'btn btn-danger')) }}
-											{{ Form::close() }}
-										</td>
 									</tr>
 								@endforeach
 							</tbody>
