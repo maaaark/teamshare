@@ -3,7 +3,7 @@
 <div class="page-content"> 
     <div class="content">  
 		<div class="page-title">	
-			<h3>Profil von {{ $user->firstname }}</h3>	
+			<h3>Dashboard</h3>	
 		</div>
 
 		@if(Session::has('message'))
@@ -14,8 +14,7 @@
 			<div class="span12">
 				<div class="grid simple">
 					<div class="grid-body">
-						{{ $user->firstname }}, {{ $user->lastname }}<br/>
-						{{ $user->email }}
+						empty
 					</div>
 				</div>
 			</div>

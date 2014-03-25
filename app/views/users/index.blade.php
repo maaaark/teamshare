@@ -3,7 +3,7 @@
 <div class="page-content"> 
     <div class="content">  
 		<div class="page-title">	
-			<h3>Dashboard</h3>	
+			<h3>User</h3>	
 		</div>
 
 		@if(Session::has('message'))
@@ -13,17 +13,6 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="grid simple">
-					<div class="grid-body">
-						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row-fluid">
-			<div class="span12">
-				<div class="grid simple">
-					<div class="grid-title">Nutzer</div>
 					<div class="grid-body">
 						<table class="table table-bordered no-more-tables">
 							<thead>
@@ -43,7 +32,8 @@
 										<td class="text-left">{{ $user->email }}</td>
 										<td class="text-left">{{ HTML::linkRoute('users.edit', 'Bearbeiten', ['id' => $user->id], ['class' => 'btn btn-default']) }}</td>
 										<td class="text-left">
-											{{ Form::open(array('method' => 'DELETE', 'route' => array('users.destroy', $user->id))) }}
+											{{ Form::open(array('method' => 'DELETE', 'route' =>
+											 array('users.destroy', $user->id))) }}
 											{{ Form::submit('Löschen', array('class' => 'btn btn-danger')) }}
 											{{ Form::close() }}
 										</td>
@@ -51,7 +41,6 @@
 								@endforeach
 							</tbody>
 						 </table>
-						
 					</div>
 				</div>
 			</div>
