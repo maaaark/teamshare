@@ -17,7 +17,8 @@
     <!-- BEGIN SIDEBAR MENU -->
     <p class="menu-title">NAVIGATION</p>
     <ul>
-      <li class="start active "> <a href="/dashboard"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <!-- <span class="badge badge-important pull-right">5</span>--></a> </li>
+      <li class="start"> <a href="/dashboard"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <!-- <span class="badge badge-important pull-right">5</span>--></a> </li>
+	  <li class=""> <a href="/users"> <i class="icon-user"></i> <span class="title">User</span></a> </li>
 	  <li class=""> <a href="/uploads"> <i class="icon-cloud-upload"></i> <span class="title">Upload</span></a> </li>
       <li class=""> <a href="/uploads"> <i class="icon-envelope"></i> <span class="title">Email</span> <!-- <span class=" badge badge-disable pull-right ">203</span> --></a> </li>
       <li class=""> <a href="javascript:;"> <i class="icon-custom-ui"></i> <span class="title">Menu</span> <span class="arrow "></span> </a>

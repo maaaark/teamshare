@@ -15,7 +15,7 @@ class UploadsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$uploads = Upload::all();
+		$uploads = Upload::where('user_id', Auth::user()->id)->get();
 
 		return View::make('uploads.index', compact('uploads'));
 	}
@@ -113,9 +113,7 @@ class UploadsController extends \BaseController {
 	public function post_upload(){
  
 		$input = Input::all();
-		$rules = array(
-		  'file' => 'image|max:3000',
-		);
+		$rules = array();
 
 		$validation = Validator::make($input, $rules);
 
