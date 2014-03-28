@@ -17,6 +17,7 @@ Route::resource('users', 'UsersController');
 Route::post('/users/store', 'UsersController@store');
 Route::post('/users/signin', 'UsersController@signin');
 
+Route::get('/logout', 'UsersController@logout');
 Route::get('/', 'BaseController@dashboard');
 Route::get('/404', 'BaseController@dashboard');
 Route::get('/dashboard', 'BaseController@dashboard');

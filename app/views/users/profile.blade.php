@@ -14,8 +14,15 @@
 			<div class="span12">
 				<div class="grid simple">
 					<div class="grid-body">
-						{{ $user->firstname }}, {{ $user->lastname }}<br/>
-						{{ $user->email }}
+						{{ $user->first_name }}, {{ $user->last_name }}<br/>
+						{{ $user->email }}<br/>
+						<br/>
+						{{ $groups }}
+						@if( Sentry::getUser()->hasAnyAccess(['users']) )
+						{
+							<br/>has Access
+						}
+						@endif
 					</div>
 				</div>
 			</div>

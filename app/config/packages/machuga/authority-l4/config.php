@@ -8,12 +8,18 @@ return array(
         $authority->addAlias('manage', array('create', 'read', 'update', 'delete'));
         $authority->addAlias('moderate', array('read', 'update', 'delete'));
 		
+		
+		if(count($user->roles) == 0) return false;
+		
+		
 		//an example using the `hasRole` function, see below examples for more details
 		if($user->hasRole('admin')){
 			$authority->allow('manage', 'all');
 		}
 		
+		
 		// loop through each of the users permissions, and create rules
+		/*
 		foreach($user->permissions as $perm) {
 			if($perm->type == 'allow') {
 				$authority->allow($perm->action, $perm->resource);
@@ -21,7 +27,7 @@ return array(
 				$authority->deny($perm->action, $perm->resource);
 			}
 		}
-			
+		*/
 			
     }
 

@@ -3008,6 +3008,7 @@ form legend,
 	display:block;
 	margin:20px 31px;
 	margin-bottom:0px;
+	margin-right: 10px;
 }
 .user-info-wrapper .profile-wrapper{
 	height:65px; 

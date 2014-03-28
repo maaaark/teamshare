@@ -14,7 +14,7 @@
 			<div class="span12">
 				<div class="grid simple">
 					<div class="grid-body">
-						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr | ROLES BRANCH
+						Eingeloggt als <strong>{{ Auth::user()->firstname }}</strong>, {{ date('d.m.Y, H:i:s') }} Uhr
 					</div>
 				</div>
 			</div>
@@ -43,7 +43,6 @@
 								@endforeach
 							</tbody>
 						 </table>
-						
 					</div>
 				</div>
 			</div>
