@@ -1,0 +1,1 @@
+/home/mark/teamshare/teamshare/app/views/uploads/show.blade.php

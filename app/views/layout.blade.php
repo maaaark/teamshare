@@ -6,6 +6,7 @@
 		{{ HTML::style('plugins/bootstrap/css/bootstrap.min.css') }}
 		{{ HTML::style('plugins/bootstrap/css/bootstrap-responsive.min.css') }}
 		{{ HTML::style('plugins/font-awesome/css/font-awesome.css') }}
+		{{ HTML::style('css/dropzone.css') }}
 		{{ HTML::style('css/animate.min.css') }}
 		{{ HTML::style('css/custom-icon-set.css') }}
 		{{ HTML::style('css/style.css') }}
@@ -33,6 +34,7 @@
 	{{ HTML::script('plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}
 	{{ HTML::script('plugins/pace/pace.min.js') }}
 	{{ HTML::script('plugins/jquery-numberAnimate/jquery.animateNumbers.js') }}
+	{{ HTML::script('js/dropzone.js') }}
 	{{ HTML::script('js/core.js') }}
 	{{ HTML::script('js/demo.js') }}	
     </body>

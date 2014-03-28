@@ -1,8 +1,5 @@
 <div class="page-sidebar" id="main-menu">
 @if(Auth::check())
-<?php if(Authority::can('edit', 'User')): ?>
-	CAN EDIT
-<?php endif ?>
     <!-- BEGIN MINI-PROFILE -->
     <div class="user-info-wrapper">
       <div class="profile-wrapper"> <img src="/img/profiles/avatar.jpg" data-src="/img/profiles/avatar.jpg" data-src-retina="img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
@@ -21,7 +18,8 @@
     <p class="menu-title">NAVIGATION</p>
     <ul>
       <li class="start active "> <a href="/dashboard"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <!-- <span class="badge badge-important pull-right">5</span>--></a> </li>
-      <li class=""> <a href="/email"> <i class="icon-envelope"></i> <span class="title">Email</span> <!-- <span class=" badge badge-disable pull-right ">203</span> --></a> </li>
+	  <li class=""> <a href="/email"> <i class="icon-cloud-upload"></i> <span class="title">Upload</span></a> </li>
+      <li class=""> <a href="/uploads"> <i class="icon-envelope"></i> <span class="title">Email</span> <!-- <span class=" badge badge-disable pull-right ">203</span> --></a> </li>
       <li class=""> <a href="javascript:;"> <i class="icon-custom-ui"></i> <span class="title">Menu</span> <span class="arrow "></span> </a>
         <ul class="sub-menu">
           <li><a href="#">Menu Link</a></li>
@@ -38,4 +36,4 @@
 @else
 	Nicht eingeloggt
 @endif	
-  </div>
+ </div>

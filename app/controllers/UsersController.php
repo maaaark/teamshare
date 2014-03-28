@@ -116,8 +116,6 @@
 				->with('message', 'There were validation errors.');
 		}
 		
-	
-		
 		public function logout() {
 			Auth::logout();
 			return Redirect::to('login')->with('message', 'Your are now logged out!');

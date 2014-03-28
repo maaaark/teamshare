@@ -108,6 +108,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		
 		'Authority\AuthorityL4\AuthorityL4ServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
 	),
 
 	/*
